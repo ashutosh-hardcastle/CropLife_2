@@ -50,7 +50,7 @@ def predict():
     if request.method == 'POST':
         pest_name = request.form['pestname']
         print(pest_name)
-        return render_template('pest_temp/'+pest_name + ".html",title = title)  # check!!!!!!!!!!!!!!!!!!!!
+        return render_template(pest_name + ".html",title = title)  # check!!!!!!!!!!!!!!!!!!!!
 
 
 @app.route('/crop-predict', methods=['POST'])
