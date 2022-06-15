@@ -46,10 +46,8 @@ def pest_recommend():
 @app.route('/pest_result',methods=['POST'])
 def predict():
     title = 'CropLife'
-    global pest_name
     if request.method == 'POST':
         pest_name = request.form['pestname']
-        print(pest_name)
         return render_template(pest_name + ".html",title = title)  # check!!!!!!!!!!!!!!!!!!!!
 
 
