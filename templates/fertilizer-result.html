@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block nav %}
+<li><a href="index.html">Home</a></li>
+<li><a href="fertilizer.html" class="active">Fertilizer</a></li>
+{% endblock %}
+
+
+{% block body %}
+<div style = "padding-top: 1%; padding-bottom: 1%; padding-left: 10%;padding-right: 10%;">
+              <p style="color: #ffc107; font-size: 20px">
+                  Difference between desired value of N and your farm's N value is {{ diff_n }}</p>
+    <br>
+              <p style="color: black; font-size: 15px">{{ recommendation }}</p>
+    <br>
+              <p style="color: #ffc107; font-size: 20px">
+                  Difference between desired value of P and your farm's P value is {{ diff_p }}</p>
+              <p style="color: black; font-size: 15px">{{ recommendation1 }}</p>
+    <br>
+              <p style="color: #ffc107; font-size: 20px">
+                  Difference between desired value of K and your farm's K value is {{ diff_k }}</p>
+              <p style="color: black; font-size: 15px">{{ recommendation2 }}</p>
+
+{% endblock %}

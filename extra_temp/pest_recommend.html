@@ -1,0 +1,82 @@
+{% extends 'layout.html' %} {% block body %}
+
+
+<style>
+  html body {
+    background-color: rgb(255, 255, 255);
+  }
+</style>
+
+<!--Form Section-->
+<br /><br />
+<h2 style="text-align: center; margin: 0px; color: black">
+  <b>Get informed advice on fertilizer based on soil</b>
+</h2>
+<br />
+<div
+  style="
+    width: 350px;
+    height: 40rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+
+    <div class="form-group">
+      <label for="pest" style="font-size: 17px"
+        ><b>Select the name of the Pest</b></label>
+   <form action="/pest_result" method="post">
+      <select
+        name="pestame"
+        class="form-control"
+        id="pest"
+        placeholder="Select a Pest"
+        style="font-weight: bold"
+        required
+      >
+<!--        <select onchange="location = this.options[this.selectedIndex].value;">-->
+        <option selected value=" ">Select Pest</option>
+        <option value="Aphids">Aphids</option>
+        <option value="Armyworm">Armyworm</option>
+        <option value="Beetle">Beetle</option>
+        <option value="Bollworm">Bollworm</option>
+        <option value="Corn Borer">Corn Borer</option>
+        <option value="Gall Flies">Gall Flies</option>
+        <option value="Grasshopper">Grasshopper</option>
+        <option value="Locust">Locust</option>
+        <option value="Maize Army Worm">Maize Army Worm</option>
+        <option value="Mites">Mites</option>
+        <option value="Mosquito">Mosquito</option>
+        <option value="Mustard Saw Fly">Mustard Saw Fly</option>
+        <option value="Sawfly">Sawfly</option>
+        <option value="Soybean Girdle Beetle">Soybean Girdle Beetle</option>
+        <option value="Soybean White Fly">Soybean White Fly</option>
+        <option value="Stem Borer">Stem Borer</option>
+        <option value="Sugarcane Internode Borer">Sugarcane Internode Borer</option>
+        <option value="Sugarcane Mealy Bug">Sugarcane Mealy Bug</option>
+        <option value="Thistle Caterpillar">Thistle Caterpillar</option>
+        <option value="Tobacco Leaf-eating Caterpillar">Tobacco Leaf-eating Caterpillar</option>
+          <input type="submit" value="Submit">
+      </select>
+</div>
+<!--    <div class="d-flex justify-content-center">-->
+<!--      <button-->
+<!--        type="submit"-->
+<!--        class="btn btn-info"-->
+<!--        style="-->
+<!--          color: black;-->
+<!--          font-weight: bold;-->
+<!--          width: 130px;-->
+<!--          height: 50px;-->
+<!--          border-radius: 12px;-->
+<!--          font-size: 21px;-->
+<!--        "-->
+<!--      >-->
+<!--        Get Insights-->
+<!--      </button>-->
+<!--    </div>-->
+
+</div>
+{% endblock %}
